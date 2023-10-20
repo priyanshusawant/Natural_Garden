@@ -8,8 +8,10 @@
     <title>Document</title>
 
     <style>
-        .col-md-4{
-            float: left;
+        .card{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
@@ -41,9 +43,9 @@
 
                             <h6>${{ item.item_price }}</h6>
 
-                            <h6 style="font-style: italic;">added for:</h6>
+                            <h6 style="font-style: italic;">added for {{ item.for_user }}:</h6>
 
-                            <h6 style="font-style: italic;">added by superuser: </h6>
+                            <h6 style="font-style: italic;">added by superuser: Admin </h6>
                             
                             <div class="detail">
                                 <a href="{% url 'plants:detail' item.id %}" 
