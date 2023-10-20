@@ -13,5 +13,11 @@ def index(request):
 
     return render(request, 'plants/index.html', context)
 
-def detail(request):
-    return HttpResponse('<h1 style = "color : Orange"> This is a details page</h1>')
+def detail(request, item_id):
+    item = Item.objects.get(pk=item_id)
+
+    context = {
+        'item':item
+    }
+
+    return render(request, 'plants/detail.html', context)
