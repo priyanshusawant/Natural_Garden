@@ -8,21 +8,29 @@
     <title>Document</title>
 </head>
 <body>
+    
     {% block body %}
 
-    <h1>This is an index page</h1>
-
     {% for item in itemlist %}
+<br><br><br>
+        <div class="row">
+            <div class="col-md-3 offset-md-2">
+                <img src="{{ item.item_image }}"
+                class="card"
+                height="140px"
+                width="200px">
+            </div>
 
-    <img src="{{ item.item_image }}">
+            <div class="col-md-4">
+                <h3>{{ item.item_name }}</h3>
+                <h3>{{ item.item_desc }}</h3>
+                <h3>{{ item.item_price }}</h3>
+            </div>
 
-        <ul>
-            <li>
-                <a href="{% url 'plants:detail' item.id %}">
-                    {{ item.id }}  {{ item.item_name }}
-                </a>
-            </li>
-        </ul>
+            <div class="col-md-3">
+
+            </div>
+        </div>
 
     {% endfor %}
 
