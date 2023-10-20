@@ -12,7 +12,9 @@
 
         <ul>
             <li>
-                {{ item.id }}  {{ item.item_name }}
+                <a href="{% url 'plants:detail' item.id %}">
+                    {{ item.id }}  {{ item.item_name }}
+                </a>
             </li>
         </ul>
 
