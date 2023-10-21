@@ -40,7 +40,7 @@
 
     <div class="col-md-3 offset-md-1">
         <a
-            href="#"
+            href="{% url 'plants:update_item' item.id %}"
             style="width:80px"
             class="btn btn-warning"
         >
@@ -48,7 +48,7 @@
         </a>
 
         <a
-            href="#"
+            href="{% url 'plants:delete_item' item.id %}"
             style="width:80px"
             class="btn btn-danger"
         >
@@ -56,7 +56,7 @@
         </a>
 
         <a
-            href="#"
+            href="{% url 'plants:index' %}"
             style="width:80px"
             class="btn btn-success"
         >
