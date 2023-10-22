@@ -1,8 +1,8 @@
 {% extends 'plants/base.html' %}
 
 {% block body %}
-
-<form>
+<br><br>
+<form method="POST">
     {% csrf_token %}
     {{ form }}
     <button type="submit">Sign Up</button>

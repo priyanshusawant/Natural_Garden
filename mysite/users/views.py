@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
@@ -6,8 +6,15 @@ from django.contrib.auth.forms import UserCreationForm
 def register(request):
     form = UserCreationForm()
 
-    context = {
-        'form':form
-    }
+    if form.is_valid():
+        form.save()
+        return redirect('plants:index')
+    
+    else:
+        form = UserCreationForm()
+
+        context = {
+            'form':form
+        }
 
     return render(request, 'users/register.html', context)

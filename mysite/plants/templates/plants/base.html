@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-
+    
 
     <nav class="navbar navbar-dark bg-dark">
         <a href="{% url 'plants:index' %}" class="navbar-brand">
@@ -32,7 +32,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div> 
-
+        
         <div class="navbar">
             <a href="{% url 'plants:create_item' %}" class="nav-item nav-link btn btn-dark">
                 Add Item
@@ -42,13 +42,15 @@
                 Profile
             </a>
 
-            <a href="#" class="nav-item nav-link btn btn-dark">
+            <a href="{% url 'register' %}" class="nav-item nav-link btn btn-dark">
                 Sign Up
             </a>
         </div>
 
 
     </nav>
+
+    
 
 
     <div class="md-5">
